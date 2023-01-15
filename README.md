@@ -83,7 +83,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ##Example:
 
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot2.jpg)
+![GaugeKit](Images/GaugeKit_sreenshot2.jpg)
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif)
 
 ###IB Example:

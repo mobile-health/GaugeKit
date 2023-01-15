@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
-import UIKit
 import QuartzCore
+import UIKit
 
 let pi_2 = Double.pi / 2
 
@@ -15,6 +15,8 @@ public enum GaugeType: Int {
     case circle = 0
     case left
     case right
+    case up
+    case down
     case line
     case custom
 }
@@ -177,11 +179,17 @@ open class Gauge: UIView {
     func getGauge(_ rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .left, .right:
-            return getHalfGauge(rotateAngle)
+            return getVerticalHalfGauge(rotateAngle)
+
+        case .up, .down:
+            return getHorizontalHalfGauge(rotateAngle)
+
         case .circle:
             return getCircleGauge(rotateAngle)
+            
         case .line:
-             return getLineGauge(rotateAngle)
+            return getLineGauge(rotateAngle)
+            
         default:
             return getCircleGauge(rotateAngle)
         }
@@ -192,7 +200,7 @@ open class Gauge: UIView {
         
         if (ringLayer != nil) {
             switch type {
-            case .left, .right:
+            case .left, .right, .down, .up:
                 // For Half Gauge, you have to fill 50% of circle and round it wisely
                 let percentage = (rate / 2 / maxValue).truncatingRemainder(dividingBy: 0.5)
                 ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percentage + ((rate != 0 && percentage == 0) ? 0.5 : 0))

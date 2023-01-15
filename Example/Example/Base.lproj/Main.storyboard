@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -91,7 +92,7 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GaugeKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-hI-3WU">
-                                        <rect key="frame" x="135" y="8" width="74" height="20.5"/>
+                                        <rect key="frame" x="141" y="8" width="62.5" height="17"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -105,7 +106,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="rate">
-                                                <real key="value" value="8"/>
+                                                <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="23"/>
@@ -123,6 +124,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
                                                 <integer key="value" value="1"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="roundCap" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -179,7 +181,7 @@
                                                 <real key="value" value="9"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
-                                                <integer key="value" value="3"/>
+                                                <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="16"/>
@@ -239,21 +241,70 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-nJ-qLX" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="91.5" y="389.5" width="160" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="6Qw-cp-dip"/>
+                                            <constraint firstAttribute="width" secondItem="3DL-nJ-qLX" secondAttribute="height" multiplier="2:1" id="JIM-yq-MJK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" systemColor="systemYellowColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" systemColor="systemBrownColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fi-dI-1uO" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="91.5" y="49.5" width="160" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="6fi-dI-1uO" secondAttribute="height" multiplier="2:1" id="5Mi-dg-15d"/>
+                                            <constraint firstAttribute="width" constant="160" id="jKd-9R-xcS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="0.75686274509999996" green="0.20000000000000001" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.1843137255" green="0.50196078430000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Xql-cv-5KY" secondAttribute="width" multiplier="5:2" id="1Ke-p1-1g3"/>
+                                    <constraint firstItem="6fi-dI-1uO" firstAttribute="width" secondItem="6fi-dI-1uO" secondAttribute="height" multiplier="2:1" id="2ih-2w-19P"/>
                                     <constraint firstAttribute="width" secondItem="h2H-B1-nqW" secondAttribute="height" multiplier="1:1" id="2ri-zW-sxG"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="leading" secondItem="Xql-cv-5KY" secondAttribute="trailing" constant="8" id="2xc-VX-bm7"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="width" secondItem="h2H-B1-nqW" secondAttribute="height" multiplier="1:1" id="4Q7-c9-Fww"/>
                                     <constraint firstItem="a4J-hI-3WU" firstAttribute="top" secondItem="h2H-B1-nqW" secondAttribute="top" constant="8" id="7De-vW-sUo"/>
                                     <constraint firstAttribute="centerY" secondItem="Xql-cv-5KY" secondAttribute="centerY" constant="19" id="8pg-eS-LOh"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerY" secondItem="fV1-7b-EpV" secondAttribute="centerY" id="91y-Yx-SPw"/>
+                                    <constraint firstItem="6fi-dI-1uO" firstAttribute="centerX" secondItem="h2H-B1-nqW" secondAttribute="centerX" id="AdO-jq-XDK"/>
+                                    <constraint firstItem="6fi-dI-1uO" firstAttribute="bottom" secondItem="0Ob-Uc-gqV" secondAttribute="top" constant="-50" id="CY9-sx-vZD"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="h2H-B1-nqW" secondAttribute="height" id="FUh-rs-Vst"/>
                                     <constraint firstAttribute="centerY" secondItem="fV1-7b-EpV" secondAttribute="centerY" constant="19" id="FuV-a1-0mz"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="width" secondItem="yI1-eB-yrd" secondAttribute="width" multiplier="5:3" id="HH7-u8-eb7"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerY" secondItem="86S-uh-YXI" secondAttribute="centerY" id="HbK-qR-RKt"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="h2H-B1-nqW" secondAttribute="height" id="HdK-Y9-Lrq"/>
+                                    <constraint firstItem="3DL-nJ-qLX" firstAttribute="top" secondItem="0Ob-Uc-gqV" secondAttribute="bottom" constant="50" id="Iqu-r6-lRO"/>
                                     <constraint firstAttribute="centerY" secondItem="0Ob-Uc-gqV" secondAttribute="centerY" constant="19" id="K2d-OX-cq5"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="width" secondItem="h2H-B1-nqW" secondAttribute="width" multiplier="2:5" id="K2z-9n-C0z"/>
                                     <constraint firstAttribute="centerX" secondItem="0Ob-Uc-gqV" secondAttribute="centerX" id="KKw-sw-2hD"/>
@@ -282,6 +333,7 @@
                                     <constraint firstAttribute="height" constant="300" id="wgz-zN-EJ9"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerY" secondItem="yI1-eB-yrd" secondAttribute="centerY" id="xeb-mW-hb5"/>
                                     <constraint firstAttribute="centerX" secondItem="a4J-hI-3WU" secondAttribute="centerX" constant="-0.5" id="xgJ-Dy-4OR"/>
+                                    <constraint firstItem="3DL-nJ-qLX" firstAttribute="centerX" secondItem="h2H-B1-nqW" secondAttribute="centerX" id="yDc-ne-ozF"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerX" secondItem="86S-uh-YXI" secondAttribute="centerX" constant="-1" id="yfc-zd-OZv"/>
                                 </constraints>
                                 <variation key="default">
@@ -309,7 +361,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-V7-5G2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-V7-5G2">
                                 <rect key="frame" x="159" y="524" width="57" height="30"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -462,7 +514,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="kea-57-2JR" firstAttribute="width" secondItem="q6f-rg-MaX" secondAttribute="width" multiplier="1:1.4" id="2Rd-Oq-1Ox"/>
                                     <constraint firstAttribute="centerY" secondItem="kea-57-2JR" secondAttribute="centerY" id="36z-Na-aAI"/>
@@ -512,7 +564,7 @@
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ufA-29-Bra" firstAttribute="centerX" secondItem="q6f-rg-MaX" secondAttribute="centerX" id="5yA-SB-zdt"/>
                             <constraint firstItem="iJZ-Sg-mHm" firstAttribute="centerX" secondItem="1Gm-Rj-eIS" secondAttribute="centerX" constant="41.5" id="73n-YJ-L9m"/>
@@ -567,5 +619,17 @@
     </scenes>
     <resources>
         <image name="GK" width="40" height="40"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.1215686274509804" green="0.12941176470588239" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

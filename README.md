@@ -77,6 +77,8 @@ If you prefer not to use either of the aforementioned dependency managers, you c
        - case `Circle`
        - case `Left`
        - case `Right`
+       - case `Up`
+       - case `Down`
        - case `Line`
 
 ##Example:
